@@ -1,0 +1,15 @@
+1. F:\DI-Bootcamp-Stage1\CLI-Quizz
+2. F:\DI-Bootcamp-Stage1\CLI-Quizz\users\student\steve\lab01\
+3.	bin
+	etc
+	lib
+	users
+	usr
+4.users
+5.	mkdir .\jon\lab03
+	echo "" > .\jon\lab03\index.html
+	ren .\jon\lab03\index.html hello.html
+	codium .\jon\lab03\hello.html
+6.rmdir /S .\jon\lab03
+7.copy .\steve\lab01\cool.html .\steve\lab02\
+8.echo "" > ..\lab02\test.html

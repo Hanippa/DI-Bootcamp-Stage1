@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms and Tables</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <thead>
+                <tr>
+                    <th><h1>Report</h1></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Violation type : </td>
+                    <td>
+                        <select name="type">
+                            <option value="slurs">Targeted hate towards a group of people</option>
+                            <option value="pornographic">Pornographic material</option>
+                            <option value="spam">Spam</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Target : </td>
+                    <td>
+                        <label for="myself">Myself</label>
+                        <input type="radio" name="target" id="myself" value="myself">
+                        <label for="group">A group of people</label>
+                        <input type="radio" name="target" id="group" value="group">
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Additional information : </td>
+                    <td>
+                        <textarea name="text" cols="35" rows="1"></textarea>
+                    </td>
+                </tr>
+            
+            </tfoot>
+        </table>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
