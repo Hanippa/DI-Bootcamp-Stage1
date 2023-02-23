@@ -1,0 +1,4 @@
+1. Css measurement unit that is relative to the parent element's font size.
+2. em is relative to the parent element and rem is relative to the root element.
+3. A web design practice where you design first for mobile and then for other devices.
+4. A naming method for organizing CSS/HTML classes.
