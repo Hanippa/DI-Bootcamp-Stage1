@@ -1,0 +1,210 @@
+body{
+    background-color: rgb(253, 255, 163);
+    overflow: hidden;
+}
+h1 {
+    text-align: center;
+    font-family: 'Nabla', cursive;
+    font-size: 50px;
+}
+
+.head, .left_arm, .torso, .right_arm, .left_leg, .right_leg {
+     background-color: #f5b847;
+}
+.android{
+    transition:transform 2s;
+}
+.robots{
+display: flex;
+justify-content: center;
+translate: 50px -100px;
+}
+
+.head { 
+    width: 200px; 
+    height: 150px; 
+    border-radius: 200px 200px 0 0; 
+    transition: width 1s;
+    position: relative;
+    top:120px;
+
+} 
+.upper_body { 
+    width: 300px; 
+    height: 150px;
+
+} 
+.left_arm, .right_arm { 
+    width: 40px; 
+    height: 125px;
+    border-radius: 100px; 
+} 
+.torso { 
+    width: 200px; 
+    height: 200px;
+    border-radius: 0 0 50px 50px; 
+    z-index: 2;
+
+} 
+.inner-torso{
+    position: relative;
+    top: -170px;
+    left: 25px;
+    width: 150px; 
+    height: 150px;
+    border-radius: 50px; 
+    background-color: #fcd58d;
+    z-index: 3;
+}
+.lower_body { 
+    width: 200px; 
+    height: 200px;
+} 
+.left_leg, .right_leg { 
+    width: 40px; 
+    height: 120px;
+    border-radius: 0 0 100px 100px; 
+} 
+.left_eye, .right_eye { 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 60px; 
+    background-color: rgb(255, 255, 255);  
+}
+.right_arm{
+   position: relative;
+   bottom: 320px;
+   left: 202px;
+   transition:transform 2s;
+}
+.left_arm{
+    position: relative;
+    top: 155px;
+    right: 42px; 
+    transition:transform 2s;
+ }
+ .right_leg{
+    position: relative;
+    top: 20px;
+    left: 130px;
+    transition:transform 2s;
+ }
+ .left_leg{
+    position: relative;
+    top: 140px;
+    left: 30px; 
+    transition:transform 2s;
+ }
+ .left_eye{
+    position: relative;
+    top: 80px;
+    left: 20px; 
+    z-index: 1;
+ }
+.left-blush{
+    position: relative;
+    top: 30px;
+    left: 10px;
+    width: 40px; 
+    height: 40px; 
+    border-radius: 60px; 
+    background-color: #f5b847;
+    z-index: 0;
+    transition:background-color 2s;
+ }
+ .right_eye{
+    position: relative;
+    top: 40px;
+    left: 140px; 
+    z-index: 1;
+ }
+.right-blush{
+    position: relative;
+    top: -10px;
+    left: 150px;
+    width: 40px; 
+    height: 40px; 
+    border-radius: 60px; 
+    background-color: #f5b847;
+    z-index: 0;
+    transition:background-color 2s;
+ }
+ .left_iris{
+    border-radius: 15px; 
+    background-color: rgb(0, 0, 0);
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 10px;
+    left: 10px; 
+    transition:transform 0.5s;
+ }
+ .right_iris{
+    border-radius: 15px; 
+    background-color: rgb(0, 0, 0);
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 10px;
+    left: 10px; 
+    transition:transform 0.5s;
+ }
+.left-ear{
+    border-radius: 60px; 
+    background-color:#f5b847;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 220px;
+    left: 0px; 
+    transition:transform 2s;
+ }
+ .right-ear{
+    border-radius: 60px; 
+    background-color:#f5b847;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 160px;
+    left: 140px; 
+    transition:transform 2s;
+ }
+ .left-inner-ear{
+    border-radius: 35px; 
+    background-color: rgb(0, 0, 0);
+    width: 35px;
+    height: 35px;
+    position: relative;
+    top: 13px;
+    left: 13px; 
+ }
+ .right-inner-ear{
+    border-radius: 35px; 
+    background-color: rgb(0, 0, 0);
+    width: 35px;
+    height: 35px;
+    position: relative;
+    top: 13px;
+    left: 13px; 
+ }
+.android:hover{
+    transform: scale(110%);
+}
+ .android:hover .left-ear,.android:hover .right-ear,.android:hover .right_iris,.android:hover .left_iris{
+    transform: scale(120%)
+ }
+ .android:hover .right_arm{
+    transform: rotate(-60deg);
+ }
+ .android:hover .left_arm{
+    transform: rotate(60deg);
+}
+.android:hover .right_leg{
+    transform: rotate(10deg);
+ }
+ .android:hover .left_leg{
+    transform: rotate(-10deg);
+}
+.android:hover .left-blush,.android:hover .right-blush{
+    background-color:rgba(248, 140, 167, 0.493)
+}
