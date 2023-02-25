@@ -26,13 +26,10 @@ translate: 50px -100px;
     border-radius: 200px 200px 0 0; 
     transition: width 1s;
     position: relative;
-    top:120px;
-
 } 
 .upper_body { 
     width: 300px; 
     height: 150px;
-
 } 
 .left_arm, .right_arm { 
     width: 40px; 
@@ -48,8 +45,6 @@ translate: 50px -100px;
 } 
 .inner-torso{
     position: relative;
-    top: -170px;
-    left: 25px;
     width: 150px; 
     height: 150px;
     border-radius: 50px; 
@@ -61,50 +56,32 @@ translate: 50px -100px;
     height: 200px;
 } 
 .left_leg, .right_leg { 
+    position: relative;
     width: 40px; 
     height: 120px;
     border-radius: 0 0 100px 100px; 
 } 
 .left_eye, .right_eye { 
+    position: relative;
     width: 40px; 
     height: 40px; 
     border-radius: 60px; 
     background-color: rgb(255, 255, 255);  
 }
-.right_arm{
-   position: relative;
-   bottom: 320px;
-   left: 202px;
-   transition:transform 2s;
-}
-.left_arm{
+.left_arm,.right_arm{
     position: relative;
-    top: 155px;
-    right: 42px; 
     transition:transform 2s;
  }
- .right_leg{
+ .left_leg,.right_leg{
     position: relative;
-    top: 20px;
-    left: 130px;
     transition:transform 2s;
  }
- .left_leg{
+ .right_eye,.left_eye{
     position: relative;
-    top: 140px;
-    left: 30px; 
-    transition:transform 2s;
- }
- .left_eye{
-    position: relative;
-    top: 80px;
-    left: 20px; 
     z-index: 1;
  }
-.left-blush{
+.right-blush,.left-blush{
     position: relative;
-    top: 30px;
-    left: 10px;
     width: 40px; 
     height: 40px; 
     border-radius: 60px; 
@@ -112,24 +89,7 @@ translate: 50px -100px;
     z-index: 0;
     transition:background-color 2s;
  }
- .right_eye{
-    position: relative;
-    top: 40px;
-    left: 140px; 
-    z-index: 1;
- }
-.right-blush{
-    position: relative;
-    top: -10px;
-    left: 150px;
-    width: 40px; 
-    height: 40px; 
-    border-radius: 60px; 
-    background-color: #f5b847;
-    z-index: 0;
-    transition:background-color 2s;
- }
- .left_iris{
+ .right_iris,.left_iris{
     border-radius: 15px; 
     background-color: rgb(0, 0, 0);
     width: 20px;
@@ -139,54 +99,75 @@ translate: 50px -100px;
     left: 10px; 
     transition:transform 0.5s;
  }
- .right_iris{
-    border-radius: 15px; 
-    background-color: rgb(0, 0, 0);
-    width: 20px;
-    height: 20px;
-    position: relative;
-    top: 10px;
-    left: 10px; 
-    transition:transform 0.5s;
- }
-.left-ear{
+.left-ear,.right-ear{
     border-radius: 60px; 
     background-color:#f5b847;
     width: 60px;
     height: 60px;
     position: relative;
-    top: 220px;
-    left: 0px; 
     transition:transform 2s;
+ }
+ .right-inner-ear, .left-inner-ear{
+    border-radius: 35px; 
+    background-color: rgb(0, 0, 0);
+    width: 35px;
+    height: 35px;
+    position: relative;
+ }
+
+/*Positions*/
+.right-inner-ear, .left-inner-ear{
+    top: 13px;
+    left: 13px; 
  }
  .right-ear{
-    border-radius: 60px; 
-    background-color:#f5b847;
-    width: 60px;
-    height: 60px;
-    position: relative;
     top: 160px;
     left: 140px; 
-    transition:transform 2s;
  }
- .left-inner-ear{
-    border-radius: 35px; 
-    background-color: rgb(0, 0, 0);
-    width: 35px;
-    height: 35px;
-    position: relative;
-    top: 13px;
-    left: 13px; 
+ .left-ear{
+    top: 220px;
+    left: 0px; 
  }
- .right-inner-ear{
-    border-radius: 35px; 
-    background-color: rgb(0, 0, 0);
-    width: 35px;
-    height: 35px;
-    position: relative;
-    top: 13px;
-    left: 13px; 
+ .right-blush{
+    top: -10px;
+    left: 150px;
  }
+ .left-blush{
+    top: 30px;
+    left: 10px;
+ }
+ .right_eye{
+    top: 40px;
+    left: 140px; 
+ }
+ .left_eye{
+    top: 80px;
+    left: 20px; 
+ }
+ .left_leg{
+    top: 140px;
+    left: 30px; 
+ }
+ .right_leg{
+    top: 20px;
+    left: 130px;
+ }
+ .left_arm{
+    top: 155px;
+    right: 42px; 
+ }
+ .right_arm{
+    bottom: 320px;
+    left: 202px;
+ }
+ .inner-torso{
+    top: -170px;
+    left: 25px;
+ }
+ .head{
+    top:120px;
+ }
+ /*Animation*/
 .android:hover{
     transform: scale(110%);
 }
