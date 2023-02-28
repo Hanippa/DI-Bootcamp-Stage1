@@ -88,10 +88,20 @@ img{
     animation:jumphighlight 1s infinite alternate linear;
     overflow: hidden;
 }
+
 .jump:hover{
     color:white;
     background-color: #d3a2bd80;
 }
+
+@keyframes jump{
+    from {
+      background-color: #000000;
+    }
+    to {
+        background-color: #fffb00;
+    }
+  }
 @keyframes jumphighlight{
     from {
       translate:0px 0px;
@@ -133,27 +143,36 @@ section{
     position: absolute;
     width: 100vw;
     height:100vh;;
-    background-color: #d1d1d1;
+    background-color: #ebebeb;
 
 }
 .roman{
     width: 60vw;
 }
 .imgcon{
-    opacity: 40%;
+    opacity: 60%;
     background-image: url(assets/roman.png);
     background-size:cover;
     background-repeat: no-repeat;
     background-position: 50%;
-    width: 50vw;
+    width: 100vw;
     height: 100vh;
-    box-shadow:-100px 0px 100px 0 #d1d1d1 inset; 
+    box-shadow:-100px 0px 100px 0 #ebebeb inset; 
     content: '';
     display: block;
+    transition:width 5s;
   }
+  section:hover .imgcon{
+    width: 30vw;
+}
+section:hover .summery{
+    width: 70vw;
+    opacity: 100%;
+}
   .summery{
+    opacity: 0%;
     margin-right:5vw;
-    width: 40vw;
+    width: 0vw;
     height: 90vh;
     border-left: 1px solid #000000;
     border-right:1px solid #000000;
@@ -161,22 +180,44 @@ section{
     padding: 40px;
     font-size: 30px;
     text-align: center;
+    transition:width 2s,opacity 2s;
+    white-space: nowrap;
+    overflow: hidden;
   }
   #name{
+    
     display: block;
-    font-size:50px;
+    background-size: 20%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size:80px;
+    background-image: linear-gradient(to bottom left,#462523 0,#cb9b51 22%, #f6e27a 45%,#f6f2c0 50%,#f6e27a 55%,#cb9b51 78%,#462523 100%);
+   color:transparent;
+   -webkit-text-stroke: 2px black;
   }
   #title{
     display: block;
     font-size:50px;
+    color: #FFD700;
+    background-clip: text;
+    background-image: linear-gradient(to bottom left,#462523 0,#cb9b51 22%, #f6e27a 45%,#f6f2c0 50%,#f6e27a 55%,#cb9b51 78%,#462523 100%);
+    color:transparent;
+    -webkit-text-stroke: 2px black;
+    -webkit-background-clip: text;
+    
   }
   #secondp{
     display: block;
     margin-top: 50px;
   }
-  #thirdp{
+  #lb{
     display: block;
-    margin-top: 50px;
+  }
+  .thumb{
+    position: relative;
+    object-fit:contain;
+    margin-top: -200px;
+    width:50vw;
   }
   @media only screen and (max-width:800px){
     .first::before{
@@ -197,7 +238,7 @@ section{
         box-shadow:-50px 0px 50px 0 #d1d1d1 inset; 
      }
      .jump{
-        top: 85vh;
+        top: 80vh;
      }
      .summery{
         font-size: 16px;
