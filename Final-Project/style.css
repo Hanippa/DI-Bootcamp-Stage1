@@ -20,6 +20,7 @@ header{
     color: #D3A2BD;
     height: 10vh;
     overflow: hidden;
+    white-space: nowrap;
 }
 h2{
     padding: 10px;
@@ -372,11 +373,16 @@ align-items: center;
     color: black;
   }
   .topvids{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     height:39vh;
     width: 100vw;
     text-align: center;
     overflow: hidden;
-    background-color: #dddddd;
+    background-color: #ffffff;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    border-top: 2px solid rgb(0, 0, 0)(0, 0, 0);
   }
   .youtubelogo{
     position: relative;
@@ -387,11 +393,38 @@ align-items: center;
     margin-bottom:0 ;
     object-fit: contain;
   }
+  .topvidsinner{
+    width: 0;
+    height: 90%;
+    background-color: rgb(233, 233, 233);
+    overflow: hidden;
+    border-left:5px solid rgb(255, 0, 0);
+    border-right:5px solid rgb(255, 0, 0);
+    animation:bordershine 5s infinite alternate linear;
+    transition:width 2s;
+  }
+  .fourth:hover .topvidsinner{
+    width:95%
+  }
+  .fourth:hover #firstp,.fourth:hover #secondp,.fourth:hover h1{
+    opacity:100%
+  }
+  @keyframes bordershine {
+    from{
+      border-left:5px solid rgb(255, 255, 255);
+      border-right:5px solid rgb(255, 255, 255);
+    }
+    to{
+      border-left:5px solid #000000;
+      border-right:5px solid #000000;
+    }
+
+  }
   .bottomvids{
     height:55vh;
     width: 100vw;
     background-image: url(assets/youtubewide.PNG);
-    background-position: 16% 16%;
+    background-position: 14% 14%;
     overflow: hidden;
   }
   footer{
@@ -399,6 +432,7 @@ align-items: center;
     width: 100vw;
     background-color: #dddddd;
     text-align: center;
+    border-top: 2px solid rgb(0, 0, 0);
   }
   footer a{
     color: black;
@@ -418,16 +452,25 @@ align-items: center;
     background-color: white;
    color:transparent;
    -webkit-text-stroke: 2px black;
+   opacity: 0%;
+   transition:opacity 2s;
+   transition-delay: 2s;
   }
   #firstp{
+    opacity: 0%;
     font-family: Arial, Helvetica, sans-serif;
     margin: 20px 7vw;
-    font-size: 30px;
+    font-size: 1.5vw;
+    transition:opacity 2s;
+    transition-delay: 2s;
   }
   #secondp{
+    opacity: 0%;
     font-family: Arial, Helvetica, sans-serif;
     margin: 10px 7vw;
-    font-size:20px;
+    font-size: 1vw;
+    transition:opacity 2s;
+    transition-delay: 2s;
   }
   .bottomvids img{
     width: 78px;
@@ -435,20 +478,16 @@ align-items: center;
     position: relative;
     height: 78px;
     border-radius: 100%;
-    left: 16%;
+    left: 14%;
     top: 2vh;
     animation:logohighlight 1s infinite alternate linear;
     border:none;
+    cursor:pointer
   }
   .bottomvids div{
     height: 100%;
     overflow: hidden;
   }
-  .bottomvids:hover img{
-    transform: scale(130%);
-    border:1px solid red;
-  }
-
   .two{
     border: solid #e2b393;
     color: #e2b393;
@@ -474,6 +513,12 @@ align-items: center;
     }
   }
   @media only screen and (max-width:800px){
+    .topvidsinner{
+      width:95%
+    }
+    #firstp,#secondp,.fourth h1{
+      opacity:100%
+    }
     .summery span{
     white-space: normal;
     }
